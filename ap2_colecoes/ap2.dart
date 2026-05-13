@@ -9,6 +9,6 @@ void main(List<String> args) {
   List<int> listaAtualizada = List.from(listaOriginal);
 
   listaAtualizada.removeWhere((num) => num % 2 == 0);
-  print("lista original: $listaOriginal");
-  print("lista atualizada : $listaAtualizada");
+  print("lista original: ${listaOriginal.join(" ; ")}");
+  print("lista atualizada : ${listaAtualizada.join(" ; ")}");
 }

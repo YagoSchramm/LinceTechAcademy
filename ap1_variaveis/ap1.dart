@@ -1,35 +1,25 @@
-import 'dart:ffi';
-import 'dart:io';
+void main() {
+  const String nome = 'Yago';
+  const String sobrenome = 'Schramm';
+  const int idade = 17;
+  const bool ativo = true;
+  const double peso = 75.5;
+  const String nacionalidade = 'Brasileiro';
 
-void main(List<String> args) {
-  print("Digite seu nome:");
-  String nome =stdin.readLineSync()!;
-  print("Digite seu sobrenome:");
-  String sobrenome= stdin.readLineSync()!;
-  print("Digite sua idade:");
-  int idade=int.parse(stdin.readLineSync()!);
-  print("Você está estudando?");
-  bool ativo=bool.parse(stdin.readLineSync()!);
-  print("Digite seu peso:");
-  double peso=double.parse(stdin.readLineSync()!);
-  print("Digite sua nacionalidade:");
-  String? nacionalidade= stdin.readLineSync();
-
-  print("Nome completo: $nome $sobrenome");
+  print('Nome completo: $nome $sobrenome');
 
   if (idade < 18) {
-    print("Idade: $idade menor de idade");
+    print('Idade: $idade menor de idade');
   } else {
-    print("Idade: $idade maior de idade");
+    print('Idade: $idade maior de idade');
   }
 
-  
-  print("Situação: ${ativo?"Ativo":"Inativo"}");
+  print('Situação: ${ativo ? "Ativo" : "Inativo"}');
+  print('Peso: $peso');
 
-  print("Peso: $peso");
-  if (nacionalidade!=null && nacionalidade.isNotEmpty) {
-      print("Sua nacionalidade é: $nacionalidade");
+  if (nacionalidade.isNotEmpty) {
+    print('Sua nacionalidade é: $nacionalidade');
   } else {
-    print("Nacionalidade não informada");
+    print('Nacionalidade não informada');
   }
 }

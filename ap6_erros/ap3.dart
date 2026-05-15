@@ -1,5 +1,19 @@
 import 'dart:math';
+void main(List<String> args) {
+  final random = Random();
+  
+  try {
+    final retangulo = Retangulo(
+      random.nextDouble() * 99,
+      random.nextDouble() * 99,
+    );
 
+    final area = retangulo.calcularArea();
+    print("Area do retângulo: $area");
+  } catch (e) {
+    print(e);
+  }
+}
 abstract class Forma {
   double calcularArea();
 }
@@ -19,21 +33,5 @@ class Retangulo implements Forma {
   @override
   double calcularArea() {
     return this.altura * this.largura;
-  }
-}
-
-void main(List<String> args) {
-  final random = Random();
-  
-  try {
-    final retangulo = Retangulo(
-      random.nextDouble() * 99,
-      random.nextDouble() * 99,
-    );
-
-    final area = retangulo.calcularArea();
-    print("Area do retângulo: $area");
-  } catch (e) {
-    print(e);
   }
 }

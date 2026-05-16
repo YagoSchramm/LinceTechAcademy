@@ -1,5 +1,5 @@
 import 'dart:math' as math;
-// Tempo 1:14:34 
+// Tempo 1:14:34 hrs
 void main() {
     final comparador =
       ComparadorFormasGeometricas();

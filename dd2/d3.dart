@@ -1,4 +1,4 @@
-// Tempo: 57:20
+// Tempo: 57:20 min
 class Musica {
   Musica({
     required this.nome,

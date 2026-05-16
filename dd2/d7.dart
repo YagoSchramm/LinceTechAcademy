@@ -1,6 +1,6 @@
 import 'dart:collection';
 import 'dart:math';
-
+// Tempo 25:53 min
 void main(List<String> args) {
   Fila fila = Fila();
   for (var i = 0; i < 10; i++) {

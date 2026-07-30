@@ -1,4 +1,4 @@
-package com.example.lince_app
+package com.example.contact_app
 
 import io.flutter.embedding.android.FlutterActivity
 

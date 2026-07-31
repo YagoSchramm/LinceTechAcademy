@@ -1,5 +1,5 @@
+import 'package:contact_app/controller/pessoa_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:contact_app/controller/database.dart';
 import 'package:contact_app/model/pessoa.dart';
 
 class HomeState extends ChangeNotifier {

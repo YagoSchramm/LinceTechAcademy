@@ -28,11 +28,11 @@ void main(List<String> args) {
   try {
     final nomeArquivo = 'texto.txt';
 
-    ArquivoTexto arquivoTexto = ArquivoTexto(nomeArquivo);
+    ArquivoTexto arquivoTexto = ArquivoTexto("a"+"b");
     arquivoTexto.abrir();
   } catch (e) {
     print(e);
   }finally{
-    print("Fim da execução");
+    print("Fim da execução ${3*7}");
   }
 }

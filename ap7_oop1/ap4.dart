@@ -1,5 +1,7 @@
-import 'dart:math';
-
+enum Genero{
+  trap,
+  rap,
+}
 class Pessoa {
   String _nome = "";
   int _idade = 0;
@@ -28,7 +30,15 @@ class Pessoa {
 
 void main(List<String> args) {
   final pessoa = Pessoa();
-
+  final genero=Genero.values[1];
+  switch(genero){
+    case Genero.rap:
+    print("rap");
+    break;
+    case Genero.trap:
+    print("trap");
+    break;
+  }
   pessoa.nome = "Yago";
   pessoa.idade = 17;
   pessoa._altura = 1.81;

@@ -58,6 +58,7 @@ class _MyAppState extends State<MyApp> {
                         border: OutlineInputBorder(),
                       ),
                       validator: (value) {
+                          Navigator.of(context).pop(false);
                         if (value == null || value.trim().isEmpty) {
                           return 'O nome não pode ser vazio.';
                         }

@@ -3,19 +3,23 @@ import 'package:flutter/material.dart';
 class ColorContainer extends StatelessWidget {
   const ColorContainer({
     super.key,
-    required this.color,            
-    required this.animation,       
-    required this.onTap,          
-    this.isDisabled = false,        
+    required this.color,
+    required this.animation,
+    required this.onTap,
+    this.isDisabled = false,
     this.bottomLeft = 0.0,
     this.bottomRight = 0.0,
     this.topLeft = 0.0,
     this.topRight = 0.0,
+    this.overrideColor,
   });
 
   final Color color;
-  final Animation<double> animation;  
+
+  final Animation<double> animation;
+
   final VoidCallback onTap;
+
   final bool isDisabled;
 
   final double bottomLeft;
@@ -23,8 +27,13 @@ class ColorContainer extends StatelessWidget {
   final double topLeft;
   final double topRight;
 
+  final Color? overrideColor;
+
   @override
   Widget build(BuildContext context) {
+    final displayedColor =
+        overrideColor ?? color;
+
     final borderRadius = BorderRadius.only(
       bottomLeft: Radius.circular(bottomLeft),
       bottomRight: Radius.circular(bottomRight),
@@ -40,7 +49,7 @@ class ColorContainer extends StatelessWidget {
           children: [
             Container(
               decoration: BoxDecoration(
-                color: color.withOpacity(0.3), 
+                color: displayedColor.withOpacity(0.3),
                 borderRadius: borderRadius,
               ),
             ),
@@ -49,11 +58,12 @@ class ColorContainer extends StatelessWidget {
               opacity: animation,
               child: Container(
                 decoration: BoxDecoration(
-                  color: color, 
+                  color: displayedColor,
                   borderRadius: borderRadius,
                   boxShadow: [
                     BoxShadow(
-                      color: color.withOpacity(0.8),
+                      color:
+                          displayedColor.withOpacity(0.8),
                       blurRadius: 15,
                       spreadRadius: 2,
                     ),
